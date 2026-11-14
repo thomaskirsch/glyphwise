@@ -68,8 +68,20 @@ function fit(char: string, x: number, strokes: Stroke[]) {
   return { inside: Math.round(inside * 100), cover: total ? Math.round((covered / total) * 100) : 0 };
 }
 
-const grid = document.getElementById("grid")!;
-for (const g of script.glyphs) {
+// The fit numbers are an authoring aid; reviewers don't need them.
+const showFit = ["localhost", "127.0.0.1"].includes(location.hostname);
+const root = document.getElementById("grid")!;
+let grid: HTMLElement = root;
+let unit = -1;
+for (const [index, g] of script.glyphs.entries()) {
+  if (g.unit !== unit) {
+    unit = g.unit;
+    const h = document.createElement("h2");
+    h.textContent = `Einheit / Unit ${unit + 1}`;
+    grid = document.createElement("div");
+    grid.className = "grid";
+    root.append(h, grid);
+  }
   const fig = document.createElement("figure");
   if (!g.verified) fig.classList.add("unverified");
   const svg = el("svg", { viewBox: script.frame.viewBox.join(" ") });
@@ -105,7 +117,9 @@ for (const g of script.glyphs) {
   const f = fit(g.char, x, g.parsed);
   fits[g.id] = f;
   const cap = document.createElement("figcaption");
-  cap.textContent = `${g.char}  ${g.name.translit} · in ${f.inside}% · cover ${f.cover}%${g.verified ? "" : " · unverified"}`;
+  const strokes = g.parsed.length;
+  cap.innerHTML = `<span class="no">#${index + 1}</span><span class="he" lang="he">${g.char}</span> ${g.name.translit} · ${strokes} ${strokes === 1 ? "Strich" : "Striche"}`;
+  if (showFit) cap.insertAdjacentHTML("beforeend", `<span class="fit">in ${f.inside}% · cover ${f.cover}%</span>`);
   fig.append(svg, cap);
   grid.append(fig);
 }

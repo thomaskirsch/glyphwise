@@ -1,31 +1,62 @@
 <!doctype html>
 <!-- SPDX-License-Identifier: MPL-2.0 -->
-<!-- Authoring aid (dev only, not part of the app build): shows every glyph's
-     strokes on top of the real font glyph – numbered, with start dot and arrow. -->
-<html lang="en">
+<!-- Stroke overview for reviewers: every glyph's strokes on top of the real font
+     glyph – numbered, with start dot and arrow. Temporarily published so native
+     speakers can check stroke order and direction (see vite.config.ts). -->
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stroke preview</title>
+    <meta name="robots" content="noindex" />
+    <title>Glyphwise – Strichübersicht</title>
     <style>
-      body { font-family: system-ui, sans-serif; margin: 16px; background: #fff; color: #222; }
-      h1 { font-size: 1.1rem; margin: 0 0 4px; }
-      p { margin: 0 0 12px; color: #666; font-size: 0.9rem; }
+      body { font-family: system-ui, sans-serif; margin: 0 auto; padding: 16px; max-width: 1100px; background: #fff; color: #222; line-height: 1.45; }
+      h1 { font-size: 1.25rem; margin: 0 0 8px; }
+      .intro { margin: 0 0 16px; color: #444; font-size: 0.95rem; }
+      .intro p { margin: 6px 0; }
+      .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 0.9rem; margin: 8px 0 0; }
+      .legend span::before { content: ""; display: inline-block; width: 14px; height: 4px; border-radius: 2px; margin-right: 6px; vertical-align: middle; background: var(--c); }
+      h2 { font-size: 1rem; margin: 20px 0 8px; color: #555; }
       .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
-      figure { margin: 0; border: 1px solid #ddd; border-radius: 8px; padding: 4px; background: #fafafa; }
-      figure.unverified { border-color: #e7c39b; }
-      svg { width: 100%; display: block; background: #fff; }
-      figcaption { font-size: 0.8rem; text-align: center; padding: 2px 0; }
+      @media (max-width: 420px) { .grid { grid-template-columns: 1fr 1fr; } }
+      figure { margin: 0; border: 1px solid #ddd; border-radius: 10px; padding: 4px; background: #fafafa; }
+      svg { width: 100%; display: block; background: #fff; border-radius: 6px; }
+      figcaption { font-size: 0.85rem; text-align: center; padding: 4px 2px 2px; }
+      figcaption .no { color: #888; margin-right: 4px; }
+      figcaption .he { font-family: "Noto Sans Hebrew", sans-serif; font-size: 1.1rem; }
+      figcaption .fit { display: block; color: #999; font-size: 0.7rem; }
       .font { font-family: "Noto Sans Hebrew"; fill: #e4e4e4; }
       .guide { stroke: #ccc; stroke-width: 0.5; }
       .stroke { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: 0.85; }
-      .num { font-size: 7px; font-weight: 700; }
+      .num { font-size: 8px; font-weight: 700; }
+      a { color: #2a5db0; }
     </style>
   </head>
   <body>
-    <h1>Stroke preview</h1>
-    <p>Grey: Noto Sans Hebrew. Coloured: our strokes in order (1 = red, 2 = blue, 3 = green). Dot = start, arrow = end.</p>
-    <div class="grid" id="grid"></div>
+    <h1>Glyphwise – Strichübersicht Hebräisch (Druckschrift)</h1>
+    <div class="intro">
+      <p>
+        Für jeden Buchstaben: in Grau die Schrift, darüber farbig die Striche, so wie die App sie zum Nachzeichnen
+        vorgibt. <strong>Punkt = Anfang</strong>, <strong>Pfeil = Ende</strong>, die kleine Zahl = Reihenfolge.
+      </p>
+      <p>
+        Bitte prüfen: Stimmen <strong>Reihenfolge</strong>, <strong>Richtung</strong> und <strong>Aufteilung</strong>
+        der Striche so, wie man die Buchstaben von Hand schreibt? Am einfachsten eine Notiz mit der Nummer, z. B.
+        „#5 א: Strich 2 sollte zuerst kommen“.
+      </p>
+      <p lang="en">
+        <em>English:</em> grey = font, coloured = the strokes the app asks learners to trace. Dot = start, arrow = end,
+        small number = order. Please check whether order, direction and split of the strokes match how the letters are
+        written by hand, e.g. “#5 א: stroke 2 should come first”.
+      </p>
+      <div class="legend">
+        <span style="--c: #d33">Strich 1</span>
+        <span style="--c: #26c">Strich 2</span>
+        <span style="--c: #2a2">Strich 3</span>
+      </div>
+    </div>
+    <div id="grid"></div>
+    <p class="intro"><a href="./">← zur App</a></p>
     <script type="module" src="/src/preview.ts"></script>
   </body>
 </html>
