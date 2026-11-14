@@ -23,7 +23,12 @@ It is made for adults: calm, no ads, no account, no tracking.
 - Spaced repetition (FSRS), recognition and listening exercises, reading real words early
 - Android app (Capacitor), iOS app, installable web app (PWA)
 
-## Run it
+## Try it
+
+**https://thomaskirsch.github.io/glyphwise/** – runs in any modern browser,
+on a phone too. Built automatically from `main`.
+
+## Run it locally
 
 Requires Node.js 20 or newer.
 
