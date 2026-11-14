@@ -1,0 +1,77 @@
+{
+  "shin": {
+    "char": "ש",
+    "name": { "native": "שִׁין", "translit": "Shin" },
+    "sound": { "de": "sch (mit Punkt oben links: s)", "en": "sh (with the dot on the left: s)" },
+    "say": "שִׁין",
+    "example": { "text": "שָׁלוֹם", "translit": "shalom", "meaning": { "de": "Frieden; Hallo", "en": "peace; hello" } },
+    "mnemonic": {
+      "de": "Drei Zacken wie Zähne – „Schin“ bedeutet Zahn. Sch wie scharfe Zähne.",
+      "en": "Three prongs like teeth – “shin” means tooth. Sh as in sharp teeth."
+    },
+    "strokes": [
+      "M80 35 L80 84 Q80 95 69 95 L28 95",
+      "M16 35 L27 93",
+      "M46 35 L62 86"
+    ],
+    "verified": false
+  },
+  "lamed": {
+    "char": "ל",
+    "name": { "native": "לָמֶד", "translit": "Lamed" },
+    "sound": { "de": "l", "en": "l" },
+    "say": "לָמֶד",
+    "example": { "text": "לֹא", "translit": "lo", "meaning": { "de": "nein", "en": "no" } },
+    "mnemonic": {
+      "de": "Der einzige Buchstabe, der über die Zeile hinausragt – wie ein erhobener Finger beim Lernen (lamad = lernen).",
+      "en": "The only letter that rises above the line – like a finger raised to learn (lamad = to learn)."
+    },
+    "strokes": ["M26 12 L26 40 L66 40 Q77 40 74 51 L52 95"],
+    "verified": false
+  },
+  "vav": {
+    "char": "ו",
+    "name": { "native": "וָו", "translit": "Vav" },
+    "sound": { "de": "w – oder Vokal o / u", "en": "v – or the vowel o / u" },
+    "say": "וָו",
+    "example": { "text": "וָו", "translit": "vav", "meaning": { "de": "Haken", "en": "hook" } },
+    "mnemonic": {
+      "de": "Ein Nagel mit kleinem Kopf – „Waw“ bedeutet Haken.",
+      "en": "A nail with a small head – “vav” means hook."
+    },
+    "strokes": ["M40 36 L56 36 L56 95"],
+    "verified": false
+  },
+  "mem": {
+    "char": "מ",
+    "name": { "native": "מֵם", "translit": "Mem" },
+    "sound": { "de": "m", "en": "m" },
+    "say": "מֵם",
+    "example": { "text": "מַיִם", "translit": "mayim", "meaning": { "de": "Wasser", "en": "water" } },
+    "mnemonic": {
+      "de": "Mem kommt von majim (Wasser): eine Welle, unten links offen.",
+      "en": "Mem comes from mayim (water): a wave, open at the bottom left."
+    },
+    "strokes": [
+      "M20 35 L30 46 L30 90",
+      "M30 37 L71 37 Q80 37 80 46 L80 95 L40 95"
+    ],
+    "verified": false
+  },
+  "bet": {
+    "char": "ב",
+    "name": { "native": "בֵּית", "translit": "Bet" },
+    "sound": { "de": "b – ohne Punkt in der Mitte: w", "en": "b – without the dot inside: v" },
+    "say": "בֵּית",
+    "example": { "text": "בַּיִת", "translit": "bayit", "meaning": { "de": "Haus", "en": "house" } },
+    "mnemonic": {
+      "de": "Ein Haus mit Dach, Wand und Boden – bajit heißt Haus. Der Boden ragt rechts hinaus.",
+      "en": "A house with roof, wall and floor – bayit means house. The floor sticks out on the right."
+    },
+    "strokes": [
+      "M20 36 L70 36 Q78 36 78 45 L78 95",
+      "M88 95 L16 95"
+    ],
+    "verified": false
+  }
+}

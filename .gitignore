@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.vite/
+*.log
+.DS_Store
+# Signing keys must never be committed
+*.jks
+*.keystore
+keystore.properties

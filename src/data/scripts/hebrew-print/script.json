@@ -1,0 +1,29 @@
+{
+  "id": "hebrew-print",
+  "name": { "de": "Hebräisch – Druckschrift", "en": "Hebrew – print (block) script", "native": "כְּתָב דְּפוּס" },
+  "language": "he-IL",
+  "direction": "rtl",
+  "license": "CC-BY-SA-4.0",
+  "status": "draft",
+  "note": "Stroke order and direction follow common teaching conventions (right to left, top to bottom) and have NOT been reviewed by a native speaker yet. Every glyph carries \"verified\": false until it has been.",
+  "frame": {
+    "viewBox": [0, 0, 100, 132],
+    "strokeWidth": 8,
+    "guides": [
+      { "y": 35, "kind": "top" },
+      { "y": 95, "kind": "baseline" }
+    ]
+  },
+  "units": [
+    {
+      "id": "u1",
+      "glyphs": ["shin", "lamed", "vav", "mem"],
+      "words": [{ "text": "שָׁלוֹם", "translit": "shalom", "meaning": { "de": "Frieden; Hallo", "en": "peace; hello" } }]
+    },
+    {
+      "id": "u2",
+      "glyphs": ["bet"],
+      "words": []
+    }
+  ]
+}

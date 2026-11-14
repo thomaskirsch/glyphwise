@@ -1,0 +1,28 @@
+{
+  "name": "glyphwise",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Learn to read and write non-Latin scripts by tracing them stroke by stroke.",
+  "license": "MPL-2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "test": "vitest run",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:data": "node tools/check-data.mjs"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.3.1",
+    "@tsconfig/svelte": "^5.0.9",
+    "svelte": "^5.57.3",
+    "svelte-check": "^4.7.8",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.0"
+  },
+  "dependencies": {
+    "@fontsource/noto-sans-hebrew": "^5.2.8"
+  }
+}
