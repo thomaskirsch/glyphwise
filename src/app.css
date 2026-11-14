@@ -86,6 +86,74 @@ button.primary {
   color: #fff;
 }
 
+/* ---------- shared building blocks ---------- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 10px;
+}
+@media (min-width: 840px) {
+  .card {
+    padding: 16px;
+  }
+}
+.label {
+  display: inline-block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-inline-end: 6px;
+}
+.row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+button.icon {
+  width: 44px;
+  padding: 0;
+  justify-content: center;
+}
+button.selected,
+button.toggle.on {
+  background: var(--ink);
+  color: var(--surface);
+  border-color: var(--ink);
+}
+.big {
+  font-family: var(--font-he);
+  font-size: 2rem;
+  line-height: 1;
+}
+.native,
+.he {
+  font-family: var(--font-he);
+  font-weight: 400;
+}
+.note {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.badge {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--badge);
+  color: var(--badge-text);
+}
+.logo {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+}
+
 button svg {
   width: 18px;
   height: 18px;

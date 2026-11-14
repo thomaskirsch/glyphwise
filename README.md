@@ -15,12 +15,26 @@ It is made for adults: calm, no ads, no account, no tracking.
 > yet been reviewed by native speakers** – help is very welcome
 > (see [CONTRIBUTING.md](CONTRIBUTING.md)).
 
+## How learning works
+
+- **Practice rounds** of about 10 tasks (5 minutes): up to two new characters
+  are introduced (animation + tracing), then asked again; earlier ones come
+  back when they are due (spaced repetition with FSRS).
+- **Task types** grow with experience: name the character → trace over a
+  faint template → hear the name and pick the character → write it from
+  memory → read real words made only of letters you already know.
+- Wrong answers are never marked red; they come back once at the end of the round.
+- A character is **mastered** after 6 attempts with at least 80 % right at the
+  first try. The next unit opens when all characters of a unit are mastered.
+- Daily goal = one round. Streak with up to two shields for missed days.
+  No leaderboards, no account; progress stays on the device.
+
 ## Planned
 
-- Hebrew: cursive and vowel points (nikud), reading the unit words
+- Hebrew: cursive and vowel points (nikud)
 - Japanese hiragana & katakana (stroke data from KanjiVG), later kanji
 - Korean Hangul, Arabic, Chinese …
-- Spaced repetition (FSRS), recognition and listening exercises, reading real words early
+- Export/import of progress, settings
 - Android app (Capacitor), iOS app, installable web app (PWA)
 
 ## Try it
@@ -45,6 +59,9 @@ npm run check:data # validates all script packs
 |---|---|
 | Stroke data per script | `src/data/scripts/<script>/` – format: [docs/stroke-format.md](docs/stroke-format.md) |
 | Stroke judging (Fréchet distance + direction) | `src/lib/matcher.ts` |
+| Progress, mastery, streak | `src/lib/progress.ts` |
+| Building a practice round | `src/lib/session.ts` |
+| Spaced repetition (FSRS) | `src/lib/scheduler.ts` |
 | Animation | `src/components/StrokeAnimation.svelte` |
 | Tracing field | `src/components/TraceField.svelte` |
 | Speech | `src/lib/speech.ts` – uses the device's own voices, nothing is bundled |

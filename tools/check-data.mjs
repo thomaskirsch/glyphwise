@@ -63,6 +63,7 @@ for (const id of readdirSync(scriptsDir)) {
     }
   }
   for (const gid of Object.keys(glyphs)) if (!seen.has(gid)) warn(`${id}/${gid}`, "is not part of any unit");
+  for (const grp of meta.confusable ?? []) for (const gid of grp) if (!glyphs[gid]) warn(`${id}/confusable`, `unknown glyph "${gid}"`);
 }
 
 // No personal e-mail addresses in the repository (GitHub noreply addresses are fine).

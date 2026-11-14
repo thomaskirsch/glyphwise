@@ -14,6 +14,17 @@
       { "y": 95, "kind": "baseline" }
     ]
   },
+  "confusable": [
+    ["bet", "kaf", "nun"],
+    ["dalet", "resh", "kaf-final"],
+    ["he", "het", "tav"],
+    ["vav", "zayin", "nun-final", "yod"],
+    ["samekh", "mem-final", "tet"],
+    ["ayin", "tsadi", "shin"],
+    ["gimel", "nun"],
+    ["pe", "kaf"],
+    ["qof", "he"]
+  ],
   "units": [
     {
       "id": "u1",

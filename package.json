@@ -23,6 +23,7 @@
     "vitest": "^5.1.0"
   },
   "dependencies": {
-    "@fontsource/noto-sans-hebrew": "^5.2.8"
+    "@fontsource/noto-sans-hebrew": "^5.2.8",
+    "ts-fsrs": "^6.0.0"
   }
 }

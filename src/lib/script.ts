@@ -26,6 +26,8 @@ export type ScriptMeta = {
   status: string;
   frame: { viewBox: [number, number, number, number]; strokeWidth: number; guides: { y: number; kind: string }[] };
   units: { id: string; glyphs: string[]; words: { text: string; translit: string; meaning: Localized }[] }[];
+  /** groups of glyph ids that learners easily mix up – used as wrong answer options */
+  confusable?: string[][];
 };
 
 /** `unit` is the index of the lesson unit the glyph belongs to. */
