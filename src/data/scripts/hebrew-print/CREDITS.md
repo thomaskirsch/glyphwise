@@ -2,8 +2,10 @@
 
 License of this pack: [CC BY-SA 4.0](../../../../LICENSE-content)
 
-- **Stroke data:** drawn by hand for Glyphwise, following common teaching
-  conventions (right to left, top to bottom). No font outlines were copied.
+- **Stroke data:** centre lines drawn by hand for Glyphwise so that they follow
+  the letter shapes of Noto Sans Hebrew (no outline data was copied). Stroke
+  order and direction follow common teaching conventions (right to left, top
+  to bottom).
   **Not yet reviewed by a native speaker** – see `verified` in `glyphs.json`.
 - **Letter names, sounds, example words:** general knowledge of the Hebrew
   alphabet; memory aids written for Glyphwise (most build on the historical

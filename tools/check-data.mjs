@@ -45,7 +45,24 @@ for (const id of readdirSync(scriptsDir)) {
     if (typeof g.verified !== "boolean") warn(where, "verified must be true or false");
     if (!g.verified) unverified++;
   }
-  for (const u of meta.units ?? []) for (const gid of u.glyphs) if (!glyphs[gid]) warn(`${id}/units/${u.id}`, `unknown glyph "${gid}"`);
+  // Units: every glyph exactly once; words only use glyphs learned up to that unit.
+  const seen = new Set();
+  const learned = new Set();
+  const stripMarks = (s) => s.replace(/[֑-ׇ]/g, ""); // Hebrew points and cantillation
+  for (const u of meta.units ?? []) {
+    for (const gid of u.glyphs) {
+      if (!glyphs[gid]) warn(`${id}/units/${u.id}`, `unknown glyph "${gid}"`);
+      else learned.add(glyphs[gid].char);
+      if (seen.has(gid)) warn(`${id}/units/${u.id}`, `glyph "${gid}" appears in more than one unit`);
+      seen.add(gid);
+    }
+    for (const w of u.words ?? []) {
+      const unknown = [...stripMarks(w.text)].filter((c) => !learned.has(c));
+      if (unknown.length) warn(`${id}/units/${u.id}`, `word ${w.text} uses letters not learned yet: ${unknown.join(" ")}`);
+      for (const l of langs) if (!w.meaning?.[l]) warn(`${id}/units/${u.id}`, `word ${w.text} misses meaning.${l}`);
+    }
+  }
+  for (const gid of Object.keys(glyphs)) if (!seen.has(gid)) warn(`${id}/${gid}`, "is not part of any unit");
 }
 
 // No personal e-mail addresses in the repository (GitHub noreply addresses are fine).

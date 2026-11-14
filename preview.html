@@ -1,0 +1,31 @@
+<!doctype html>
+<!-- SPDX-License-Identifier: MPL-2.0 -->
+<!-- Authoring aid (dev only, not part of the app build): shows every glyph's
+     strokes on top of the real font glyph – numbered, with start dot and arrow. -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stroke preview</title>
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 16px; background: #fff; color: #222; }
+      h1 { font-size: 1.1rem; margin: 0 0 4px; }
+      p { margin: 0 0 12px; color: #666; font-size: 0.9rem; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+      figure { margin: 0; border: 1px solid #ddd; border-radius: 8px; padding: 4px; background: #fafafa; }
+      figure.unverified { border-color: #e7c39b; }
+      svg { width: 100%; display: block; background: #fff; }
+      figcaption { font-size: 0.8rem; text-align: center; padding: 2px 0; }
+      .font { font-family: "Noto Sans Hebrew"; fill: #e4e4e4; }
+      .guide { stroke: #ccc; stroke-width: 0.5; }
+      .stroke { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; opacity: 0.85; }
+      .num { font-size: 7px; font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <h1>Stroke preview</h1>
+    <p>Grey: Noto Sans Hebrew. Coloured: our strokes in order (1 = red, 2 = blue, 3 = green). Dot = start, arrow = end.</p>
+    <div class="grid" id="grid"></div>
+    <script type="module" src="/src/preview.ts"></script>
+  </body>
+</html>

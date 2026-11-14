@@ -29,9 +29,13 @@
     if (!speak(text, script.language)) voiceMissing = true;
   }
 
+  let tabs: HTMLButtonElement[] = $state([]);
+
   function select(i: number) {
     index = i;
     replay++;
+    // keep the current letter visible in the (horizontally scrolling) letter bar
+    tabs[i]?.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
   }
 
   function nextGlyph() {
@@ -49,7 +53,15 @@
       </div>
       <nav class="glyphs" dir={script.direction} aria-label={script.name[lang]}>
         {#each script.glyphs as g, i}
-          <button class="glyph-tab" class:selected={i === index} lang="he" onclick={() => select(i)} aria-pressed={i === index}>{g.char}</button>
+          <button
+            class="glyph-tab"
+            class:selected={i === index}
+            class:unit-start={i > 0 && g.unit !== script.glyphs[i - 1].unit}
+            lang="he"
+            onclick={() => select(i)}
+            aria-pressed={i === index}
+            bind:this={tabs[i]}>{g.char}</button
+          >
         {/each}
       </nav>
     </header>
@@ -205,6 +217,10 @@
     padding: 0;
     justify-content: center;
     flex-shrink: 0;
+  }
+  /* a little extra space marks where a new lesson unit begins */
+  .glyph-tab.unit-start {
+    margin-inline-start: 10px;
   }
   .glyph-tab.selected,
   .levels button.selected,

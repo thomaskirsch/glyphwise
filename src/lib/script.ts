@@ -28,14 +28,16 @@ export type ScriptMeta = {
   units: { id: string; glyphs: string[]; words: { text: string; translit: string; meaning: Localized }[] }[];
 };
 
-export type Glyph = GlyphData & { id: string; parsed: Stroke[] };
+/** `unit` is the index of the lesson unit the glyph belongs to. */
+export type Glyph = GlyphData & { id: string; unit: number; parsed: Stroke[] };
 export type Script = ScriptMeta & { glyphs: Glyph[] };
 
+/** Glyphs come out in learning order: unit by unit, in the order listed there. */
 export function buildScript(meta: ScriptMeta, glyphs: Record<string, GlyphData>): Script {
-  return {
-    ...meta,
-    glyphs: Object.entries(glyphs).map(([id, g]) => ({ ...g, id, parsed: g.strokes.map((s) => parseStroke(s)) })),
-  };
+  const ordered = meta.units.flatMap((u, unit) =>
+    u.glyphs.map((id) => ({ ...glyphs[id], id, unit, parsed: glyphs[id].strokes.map((s) => parseStroke(s)) })),
+  );
+  return { ...meta, glyphs: ordered };
 }
 
 export const scripts: Script[] = [

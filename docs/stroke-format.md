@@ -10,9 +10,27 @@ Every script lives in its own folder: `src/data/scripts/<script-id>/`
 
 ## Drawing frame
 
-`frame.viewBox` is `[0, 0, 100, 132]` for Hebrew: a character is about 100
-units wide; `guides` are the helper lines (top line y = 35, baseline y = 95).
-Ascenders (ל) go up to about y = 12, descenders (ך ן ף ץ ק) down to about y = 125.
+`frame.viewBox` is `[0, 0, 100, 132]` for Hebrew; `guides` are the helper
+lines (top line y = 35, baseline y = 95). The ascender of ל reaches y ≈ 21,
+descenders (ך ן ף ץ ק) reach y ≈ 112. Stroke shapes follow the centre line of
+Noto Sans Hebrew at that size.
+
+## Checking shapes visually
+
+`npm run dev`, then open `/preview.html`: every glyph is drawn with the font
+in grey and our strokes on top (numbered, start dot, arrow). Each card shows
+two numbers:
+
+- **in** – % of our centre-line points that lie on the font's ink
+- **cover** – % of the font's ink that is near one of our strokes
+
+Both should be close to 100 %.
+
+## Lesson units
+
+`units` in `script.json` define the learning order. `npm run check:data`
+makes sure every glyph is in exactly one unit and every example word only
+uses letters learned up to its unit.
 
 ## A glyph
 

@@ -5,7 +5,7 @@
   "direction": "rtl",
   "license": "CC-BY-SA-4.0",
   "status": "draft",
-  "note": "Stroke order and direction follow common teaching conventions (right to left, top to bottom) and have NOT been reviewed by a native speaker yet. Every glyph carries \"verified\": false until it has been.",
+  "note": "Stroke shapes follow Noto Sans Hebrew; stroke order and direction follow common teaching conventions (right to left, top to bottom) and have NOT been reviewed by a native speaker yet. Every glyph carries \"verified\": false until it has been. Units keep easily confused letters apart (ב/כ, ד/ר/ך, ה/ח/ת, ו/ז/ן, ס/ם, ע/צ) and every word only uses letters learned so far.",
   "frame": {
     "viewBox": [0, 0, 100, 132],
     "strokeWidth": 8,
@@ -17,13 +17,74 @@
   "units": [
     {
       "id": "u1",
-      "glyphs": ["shin", "lamed", "vav", "mem"],
-      "words": [{ "text": "שָׁלוֹם", "translit": "shalom", "meaning": { "de": "Frieden; Hallo", "en": "peace; hello" } }]
+      "glyphs": ["shin", "lamed", "vav", "mem-final"],
+      "words": [
+        { "text": "שָׁלוֹם", "translit": "shalom", "meaning": { "de": "Frieden; Hallo", "en": "peace; hello" } },
+        { "text": "לוֹ", "translit": "lo", "meaning": { "de": "ihm", "en": "to him" } }
+      ]
     },
     {
       "id": "u2",
-      "glyphs": ["bet"],
-      "words": []
+      "glyphs": ["alef", "bet", "mem", "tav", "dalet"],
+      "words": [
+        { "text": "אַבָּא", "translit": "abba", "meaning": { "de": "Papa", "en": "dad" } },
+        { "text": "אִמָּא", "translit": "ima", "meaning": { "de": "Mama", "en": "mum" } },
+        { "text": "בַּת", "translit": "bat", "meaning": { "de": "Tochter", "en": "daughter" } },
+        { "text": "דָּם", "translit": "dam", "meaning": { "de": "Blut", "en": "blood" } },
+        { "text": "אֲבָל", "translit": "aval", "meaning": { "de": "aber", "en": "but" } }
+      ]
+    },
+    {
+      "id": "u3",
+      "glyphs": ["he", "yod", "kaf", "nun"],
+      "words": [
+        { "text": "הוּא", "translit": "hu", "meaning": { "de": "er", "en": "he" } },
+        { "text": "הִיא", "translit": "hi", "meaning": { "de": "sie", "en": "she" } },
+        { "text": "יָד", "translit": "yad", "meaning": { "de": "Hand", "en": "hand" } },
+        { "text": "יֶלֶד", "translit": "yeled", "meaning": { "de": "Kind", "en": "child" } },
+        { "text": "בַּיִת", "translit": "bayit", "meaning": { "de": "Haus", "en": "house" } },
+        { "text": "כֶּלֶב", "translit": "kelev", "meaning": { "de": "Hund", "en": "dog" } },
+        { "text": "תּוֹדָה", "translit": "toda", "meaning": { "de": "danke", "en": "thank you" } },
+        { "text": "מָה", "translit": "ma", "meaning": { "de": "was", "en": "what" } },
+        { "text": "נָא", "translit": "na", "meaning": { "de": "bitte (höflich)", "en": "please (polite)" } }
+      ]
+    },
+    {
+      "id": "u4",
+      "glyphs": ["resh", "ayin", "qof", "pe"],
+      "words": [
+        { "text": "קָפֶה", "translit": "kafe", "meaning": { "de": "Kaffee", "en": "coffee" } },
+        { "text": "עִיר", "translit": "ir", "meaning": { "de": "Stadt", "en": "city" } },
+        { "text": "רֹאשׁ", "translit": "rosh", "meaning": { "de": "Kopf", "en": "head" } },
+        { "text": "פֶּה", "translit": "pe", "meaning": { "de": "Mund", "en": "mouth" } },
+        { "text": "בֹּקֶר", "translit": "boker", "meaning": { "de": "Morgen", "en": "morning" } },
+        { "text": "עֶרֶב", "translit": "erev", "meaning": { "de": "Abend", "en": "evening" } },
+        { "text": "נֵר", "translit": "ner", "meaning": { "de": "Kerze", "en": "candle" } }
+      ]
+    },
+    {
+      "id": "u5",
+      "glyphs": ["samekh", "gimel", "het", "nun-final"],
+      "words": [
+        { "text": "סוּס", "translit": "sus", "meaning": { "de": "Pferd", "en": "horse" } },
+        { "text": "גַּם", "translit": "gam", "meaning": { "de": "auch", "en": "also" } },
+        { "text": "חַם", "translit": "cham", "meaning": { "de": "heiß", "en": "hot" } },
+        { "text": "לֶחֶם", "translit": "lechem", "meaning": { "de": "Brot", "en": "bread" } },
+        { "text": "כֵּן", "translit": "ken", "meaning": { "de": "ja", "en": "yes" } },
+        { "text": "אָמֵן", "translit": "amen", "meaning": { "de": "Amen", "en": "amen" } }
+      ]
+    },
+    {
+      "id": "u6",
+      "glyphs": ["zayin", "tet", "tsadi", "kaf-final", "pe-final", "tsadi-final"],
+      "words": [
+        { "text": "זֶה", "translit": "ze", "meaning": { "de": "das; dieser", "en": "this" } },
+        { "text": "טוֹב", "translit": "tov", "meaning": { "de": "gut", "en": "good" } },
+        { "text": "צָב", "translit": "tsav", "meaning": { "de": "Schildkröte", "en": "turtle" } },
+        { "text": "מֶלֶךְ", "translit": "melech", "meaning": { "de": "König", "en": "king" } },
+        { "text": "כֶּסֶף", "translit": "kesef", "meaning": { "de": "Geld", "en": "money" } },
+        { "text": "עֵץ", "translit": "ets", "meaning": { "de": "Baum", "en": "tree" } }
+      ]
     }
   ]
 }

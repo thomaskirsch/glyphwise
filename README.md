@@ -9,14 +9,15 @@ shape, direction and order.
 
 It is made for adults: calm, no ads, no account, no tracking.
 
-> **Status: early prototype.** Hebrew print script, 5 letters (ש ל ו מ ב).
+> **Status: early prototype.** Hebrew print script, all 27 letter forms
+> (22 letters + 5 final forms) in 6 lesson units.
 > The Hebrew stroke order follows common teaching conventions but has **not
 > yet been reviewed by native speakers** – help is very welcome
 > (see [CONTRIBUTING.md](CONTRIBUTING.md)).
 
 ## Planned
 
-- Hebrew: all 27 letter forms, then cursive and vowel points (nikud)
+- Hebrew: cursive and vowel points (nikud), reading the unit words
 - Japanese hiragana & katakana (stroke data from KanjiVG), later kanji
 - Korean Hangul, Arabic, Chinese …
 - Spaced repetition (FSRS), recognition and listening exercises, reading real words early

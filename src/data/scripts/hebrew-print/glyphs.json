@@ -9,11 +9,7 @@
       "de": "Drei Zacken wie Zähne – „Schin“ bedeutet Zahn. Sch wie scharfe Zähne.",
       "en": "Three prongs like teeth – “shin” means tooth. Sh as in sharp teeth."
     },
-    "strokes": [
-      "M80 35 L80 84 Q80 95 69 95 L28 95",
-      "M16 35 L27 93",
-      "M46 35 L62 86"
-    ],
+    "strokes": ["M75 37 L75 72 Q75 91 50 91 Q24 91 24 72 L24 37", "M51 37 L51 55 Q50 64 30 69"],
     "verified": false
   },
   "lamed": {
@@ -26,7 +22,7 @@
       "de": "Der einzige Buchstabe, der über die Zeile hinausragt – wie ein erhobener Finger beim Lernen (lamad = lernen).",
       "en": "The only letter that rises above the line – like a finger raised to learn (lamad = to learn)."
     },
-    "strokes": ["M26 12 L26 40 L66 40 Q77 40 74 51 L52 95"],
+    "strokes": ["M33 21 L33 39 L62 39 Q69 40 67 47 L50 94"],
     "verified": false
   },
   "vav": {
@@ -39,23 +35,34 @@
       "de": "Ein Nagel mit kleinem Kopf – „Waw“ bedeutet Haken.",
       "en": "A nail with a small head – “vav” means hook."
     },
-    "strokes": ["M40 36 L56 36 L56 95"],
+    "strokes": ["M42 39 L54 39 L54 94"],
     "verified": false
   },
-  "mem": {
-    "char": "מ",
-    "name": { "native": "מֵם", "translit": "Mem" },
-    "sound": { "de": "m", "en": "m" },
-    "say": "מֵם",
-    "example": { "text": "מַיִם", "translit": "mayim", "meaning": { "de": "Wasser", "en": "water" } },
+  "mem-final": {
+    "char": "ם",
+    "name": { "native": "מֵם סוֹפִית", "translit": "Mem sofit" },
+    "sound": { "de": "m (am Wortende)", "en": "m (at the end of a word)" },
+    "say": "מֵם סוֹפִית",
+    "example": { "text": "שָׁלוֹם", "translit": "shalom", "meaning": { "de": "Frieden; Hallo", "en": "peace; hello" } },
     "mnemonic": {
-      "de": "Mem kommt von majim (Wasser): eine Welle, unten links offen.",
-      "en": "Mem comes from mayim (water): a wave, open at the bottom left."
+      "de": "Am Wortende schließt sich das מ zu einer Kiste.",
+      "en": "At the end of a word מ closes into a box."
     },
-    "strokes": [
-      "M20 35 L30 46 L30 90",
-      "M30 37 L71 37 Q80 37 80 46 L80 95 L40 95"
-    ],
+    "strokes": ["M25 39 L64 39 Q72 40 72 48 L72 91 L33 91", "M33 42 L33 91"],
+    "verified": false
+  },
+
+  "alef": {
+    "char": "א",
+    "name": { "native": "אָלֶף", "translit": "Alef" },
+    "sound": { "de": "stumm – trägt nur den Vokal", "en": "silent – only carries a vowel" },
+    "say": "אָלֶף",
+    "example": { "text": "אַבָּא", "translit": "abba", "meaning": { "de": "Papa", "en": "dad" } },
+    "mnemonic": {
+      "de": "Ein Ochsenkopf (alef ≈ Rind): ein schräger Rücken, oben rechts ein Horn, unten links ein Bein. Alef selbst ist stumm.",
+      "en": "An ox head (alef ≈ cattle): a slanted back, a horn top right, a leg bottom left. Alef itself is silent."
+    },
+    "strokes": ["M30 36 L72 94", "M72 36 L72 50 Q71 62 58 69", "M46 58 Q33 61 31 70 L27 94"],
     "verified": false
   },
   "bet": {
@@ -68,10 +75,284 @@
       "de": "Ein Haus mit Dach, Wand und Boden – bajit heißt Haus. Der Boden ragt rechts hinaus.",
       "en": "A house with roof, wall and floor – bayit means house. The floor sticks out on the right."
     },
-    "strokes": [
-      "M20 36 L70 36 Q78 36 78 45 L78 95",
-      "M88 95 L16 95"
-    ],
+    "strokes": ["M30 39 L56 39 Q63 40 63 47 L63 91", "M73 91 L27 91"],
+    "verified": false
+  },
+  "mem": {
+    "char": "מ",
+    "name": { "native": "מֵם", "translit": "Mem" },
+    "sound": { "de": "m", "en": "m" },
+    "say": "מֵם",
+    "example": { "text": "מַיִם", "translit": "mayim", "meaning": { "de": "Wasser", "en": "water" } },
+    "mnemonic": {
+      "de": "Mem kommt von majim (Wasser): eine Welle, unten links offen.",
+      "en": "Mem comes from mayim (water): a wave, open at the bottom left."
+    },
+    "strokes": ["M28 37 Q36 62 28 94", "M34 52 Q40 38 56 38 Q75 38 75 58 L75 74 Q74 92 46 92"],
+    "verified": false
+  },
+  "tav": {
+    "char": "ת",
+    "name": { "native": "תָּו", "translit": "Tav" },
+    "sound": { "de": "t", "en": "t" },
+    "say": "תָּו",
+    "example": { "text": "תּוֹדָה", "translit": "toda", "meaning": { "de": "danke", "en": "thank you" } },
+    "mnemonic": {
+      "de": "Wie ח, aber das linke Bein hat einen Fuß – t wie toda (danke).",
+      "en": "Like ח, but the left leg has a foot – t as in toda (thanks)."
+    },
+    "strokes": ["M25 39 L64 39 Q72 40 72 48 L72 94", "M36 42 L36 86 Q35 92 25 93"],
+    "verified": false
+  },
+  "dalet": {
+    "char": "ד",
+    "name": { "native": "דָּלֶת", "translit": "Dalet" },
+    "sound": { "de": "d", "en": "d" },
+    "say": "דָּלֶת",
+    "example": { "text": "דָּג", "translit": "dag", "meaning": { "de": "Fisch", "en": "fish" } },
+    "mnemonic": {
+      "de": "Eine Tür (delet): Der Balken oben ragt rechts über die Ecke hinaus – anders als beim runden ר.",
+      "en": "A door (delet): the top beam sticks out past the corner on the right – unlike the rounded ר."
+    },
+    "strokes": ["M27 39 L73 39", "M60 40 L60 94"],
+    "verified": false
+  },
+
+  "he": {
+    "char": "ה",
+    "name": { "native": "הֵא", "translit": "He" },
+    "sound": { "de": "h (am Wortende meist stumm)", "en": "h (usually silent at the end of a word)" },
+    "say": "הֵא",
+    "example": { "text": "הוּא", "translit": "hu", "meaning": { "de": "er", "en": "he" } },
+    "mnemonic": {
+      "de": "Ein Fenster mit Lücke oben links – durch die Lücke weht ein Hauch: h.",
+      "en": "A window with a gap at the top left – a breath of air blows through: h."
+    },
+    "strokes": ["M27 39 L62 39 Q69 40 69 48 L69 94", "M30 62 L30 94"],
+    "verified": false
+  },
+  "yod": {
+    "char": "י",
+    "name": { "native": "יוֹד", "translit": "Yod" },
+    "sound": { "de": "j – oder Vokal i", "en": "y – or the vowel i" },
+    "say": "יוֹד",
+    "example": { "text": "יָד", "translit": "yad", "meaning": { "de": "Hand", "en": "hand" } },
+    "mnemonic": {
+      "de": "Das kleinste Zeichen, ein schwebender Tropfen – jad heißt Hand.",
+      "en": "The smallest letter, a floating drop – yad means hand."
+    },
+    "strokes": ["M42 39 L54 39 L54 66"],
+    "verified": false
+  },
+  "kaf": {
+    "char": "כ",
+    "name": { "native": "כַּף", "translit": "Kaf" },
+    "sound": { "de": "k – ohne Punkt: ch wie in „Bach“", "en": "k – without the dot: kh" },
+    "say": "כַּף",
+    "example": { "text": "כֶּלֶב", "translit": "kelev", "meaning": { "de": "Hund", "en": "dog" } },
+    "mnemonic": {
+      "de": "Eine hohle Hand (kaf = Handfläche) – rund und ohne vorstehenden Boden, anders als ב.",
+      "en": "A cupped hand (kaf = palm) – round, with no floor sticking out, unlike ב."
+    },
+    "strokes": ["M30 39 L52 39 Q66 40 66 56 L66 76 Q66 91 50 91 L30 91"],
+    "verified": false
+  },
+  "nun": {
+    "char": "נ",
+    "name": { "native": "נוּן", "translit": "Nun" },
+    "sound": { "de": "n", "en": "n" },
+    "say": "נוּן",
+    "example": { "text": "נֵר", "translit": "ner", "meaning": { "de": "Kerze", "en": "candle" } },
+    "mnemonic": {
+      "de": "Ein schmales, gebücktes כ – n wie nieder.",
+      "en": "A narrow, bent-over כ – n as in nod."
+    },
+    "strokes": ["M43 38 Q55 38 57 45 L57 91 L39 91"],
+    "verified": false
+  },
+
+  "resh": {
+    "char": "ר",
+    "name": { "native": "רֵישׁ", "translit": "Resh" },
+    "sound": { "de": "r (im Rachen, wie im Deutschen)", "en": "r (in the throat, like a French r)" },
+    "say": "רֵישׁ",
+    "example": { "text": "רֹאשׁ", "translit": "rosh", "meaning": { "de": "Kopf", "en": "head" } },
+    "mnemonic": {
+      "de": "Resch wie rosch (Kopf): eine runde Kopfform – anders als das eckige ד.",
+      "en": "Resh as in rosh (head): a round head shape – unlike the square ד."
+    },
+    "strokes": ["M31 39 L54 39 Q66 40 66 54 L66 94"],
+    "verified": false
+  },
+  "ayin": {
+    "char": "ע",
+    "name": { "native": "עַיִן", "translit": "Ayin" },
+    "sound": { "de": "heute meist stumm – trägt den Vokal", "en": "mostly silent today – carries a vowel" },
+    "say": "עַיִן",
+    "example": { "text": "עִיר", "translit": "ir", "meaning": { "de": "Stadt", "en": "city" } },
+    "mnemonic": {
+      "de": "Ajin heißt Auge: zwei Arme wie Augenbrauen, die sich unten treffen.",
+      "en": "Ayin means eye: two arms like eyebrows that meet at the bottom."
+    },
+    "strokes": ["M72 36 L69 66 Q66 84 52 88 L30 95", "M33 36 L44 84"],
+    "verified": false
+  },
+  "qof": {
+    "char": "ק",
+    "name": { "native": "קוֹף", "translit": "Qof" },
+    "sound": { "de": "k", "en": "k" },
+    "say": "קוֹף",
+    "example": { "text": "קָפֶה", "translit": "kafe", "meaning": { "de": "Kaffee", "en": "coffee" } },
+    "mnemonic": {
+      "de": "Kof heißt Affe: Das linke Bein hängt wie ein Schwanz unter die Zeile.",
+      "en": "Qof means monkey: the left leg hangs below the line like a tail."
+    },
+    "strokes": ["M26 39 L64 39 Q70 40 70 48 L57 93", "M30 60 L30 112"],
+    "verified": false
+  },
+  "pe": {
+    "char": "פ",
+    "name": { "native": "פֵּא", "translit": "Pe" },
+    "sound": { "de": "p – ohne Punkt: f", "en": "p – without the dot: f" },
+    "say": "פֵּא",
+    "example": { "text": "פֶּה", "translit": "pe", "meaning": { "de": "Mund", "en": "mouth" } },
+    "mnemonic": {
+      "de": "Pe heißt Mund – innen oben hängt die Zunge.",
+      "en": "Pe means mouth – the tongue hangs inside at the top."
+    },
+    "strokes": ["M42 72 Q30 70 30 58 L30 50 Q31 39 48 39 Q69 39 69 54 L69 76 Q68 91 48 91 L27 91"],
+    "verified": false
+  },
+
+  "samekh": {
+    "char": "ס",
+    "name": { "native": "סָמֶךְ", "translit": "Samekh" },
+    "sound": { "de": "s wie in „Bus“ (stimmlos)", "en": "s" },
+    "say": "סָמֶךְ",
+    "example": { "text": "סוּס", "translit": "sus", "meaning": { "de": "Pferd", "en": "horse" } },
+    "mnemonic": {
+      "de": "Ein geschlossener Ring – wie eine Schlange, die sich in den Schwanz beißt: sss.",
+      "en": "A closed ring – like a snake biting its tail: sss."
+    },
+    "strokes": ["M24 39 L60 39 Q72 40 72 54 L72 74 Q72 91 50 91 Q30 91 30 74 L30 54 Q31 46 36 42"],
+    "verified": false
+  },
+  "gimel": {
+    "char": "ג",
+    "name": { "native": "גִּימֶל", "translit": "Gimel" },
+    "sound": { "de": "g", "en": "g" },
+    "say": "גִּימֶל",
+    "example": { "text": "גַּם", "translit": "gam", "meaning": { "de": "auch", "en": "also" } },
+    "mnemonic": {
+      "de": "Ein Kamel (gamal) beim Schritt – der kleine Fuß unten links läuft los.",
+      "en": "A camel (gamal) taking a step – the little foot at the bottom left walks off."
+    },
+    "strokes": ["M42 37 Q55 38 57 46 L58 94", "M57 79 L39 94"],
+    "verified": false
+  },
+  "het": {
+    "char": "ח",
+    "name": { "native": "חֵית", "translit": "Het" },
+    "sound": { "de": "ch wie in „Bach“", "en": "kh, as in Scottish “loch”" },
+    "say": "חֵית",
+    "example": { "text": "חַם", "translit": "cham", "meaning": { "de": "heiß", "en": "hot" } },
+    "mnemonic": {
+      "de": "Ein geschlossenes Tor – ganz ohne Lücke, rau wie ch in „Bach“.",
+      "en": "A closed gate – no gap at all, rough like kh."
+    },
+    "strokes": ["M25 39 L64 39 Q72 40 72 48 L72 94", "M33 42 L33 94"],
+    "verified": false
+  },
+  "nun-final": {
+    "char": "ן",
+    "name": { "native": "נוּן סוֹפִית", "translit": "Nun sofit" },
+    "sound": { "de": "n (am Wortende)", "en": "n (at the end of a word)" },
+    "say": "נוּן סוֹפִית",
+    "example": { "text": "אָמֵן", "translit": "amen", "meaning": { "de": "Amen", "en": "amen" } },
+    "mnemonic": {
+      "de": "Am Wortende richtet sich das נ auf und reicht weit unter die Zeile.",
+      "en": "At the end of a word נ stands up straight and reaches far below the line."
+    },
+    "strokes": ["M42 39 L54 39 L54 112"],
+    "verified": false
+  },
+
+  "zayin": {
+    "char": "ז",
+    "name": { "native": "זַיִן", "translit": "Zayin" },
+    "sound": { "de": "s wie in „Sonne“ (stimmhaft)", "en": "z" },
+    "say": "זַיִן",
+    "example": { "text": "זֶה", "translit": "ze", "meaning": { "de": "das; dieser", "en": "this" } },
+    "mnemonic": {
+      "de": "Ein Schwert (sajin = Waffe) mit Querstück oben – summt wie ein stimmhaftes s.",
+      "en": "A sword (zayin = weapon) with a crossguard on top – it buzzes like z."
+    },
+    "strokes": ["M39 39 L61 39", "M52 42 Q46 52 45 62 L46 94"],
+    "verified": false
+  },
+  "tet": {
+    "char": "ט",
+    "name": { "native": "טֵית", "translit": "Tet" },
+    "sound": { "de": "t", "en": "t" },
+    "say": "טֵית",
+    "example": { "text": "טוֹב", "translit": "tov", "meaning": { "de": "gut", "en": "good" } },
+    "mnemonic": {
+      "de": "Ein Korb, oben rechts nach innen gerollt – t wie tov (gut).",
+      "en": "A basket rolled inward at the top right – t as in tov (good)."
+    },
+    "strokes": ["M27 36 L28 70 Q30 92 50 92 Q72 92 72 70 L72 52 Q72 39 60 39 L48 39"],
+    "verified": false
+  },
+  "tsadi": {
+    "char": "צ",
+    "name": { "native": "צָדִי", "translit": "Tsadi" },
+    "sound": { "de": "z wie in „Zug“ (ts)", "en": "ts" },
+    "say": "צָדִי",
+    "example": { "text": "צָב", "translit": "tsav", "meaning": { "de": "Schildkröte", "en": "turtle" } },
+    "mnemonic": {
+      "de": "Wie ein ע mit flachem Boden – z wie Zange.",
+      "en": "Like ע with a flat floor – ts as in cats."
+    },
+    "strokes": ["M70 36 L69 52 Q67 62 54 67", "M30 37 L52 66 L67 91 L27 91"],
+    "verified": false
+  },
+  "kaf-final": {
+    "char": "ך",
+    "name": { "native": "כַּף סוֹפִית", "translit": "Kaf sofit" },
+    "sound": { "de": "ch wie in „Bach“ (am Wortende)", "en": "kh (at the end of a word)" },
+    "say": "כַּף סוֹפִית",
+    "example": { "text": "מֶלֶךְ", "translit": "melech", "meaning": { "de": "König", "en": "king" } },
+    "mnemonic": {
+      "de": "Am Wortende lässt das כ seinen Boden fallen und läuft lang nach unten.",
+      "en": "At the end of a word כ drops its floor and runs down below the line."
+    },
+    "strokes": ["M30 39 L56 39 Q66 40 66 50 L66 112"],
+    "verified": false
+  },
+  "pe-final": {
+    "char": "ף",
+    "name": { "native": "פֵא סוֹפִית", "translit": "Fe sofit" },
+    "sound": { "de": "f (am Wortende)", "en": "f (at the end of a word)" },
+    "say": "פֵא סוֹפִית",
+    "example": { "text": "כֶּסֶף", "translit": "kesef", "meaning": { "de": "Geld", "en": "money" } },
+    "mnemonic": {
+      "de": "Am Wortende reicht der Mund mit einem langen Strich unter die Zeile.",
+      "en": "At the end of a word the mouth reaches below the line."
+    },
+    "strokes": ["M42 72 Q30 70 30 58 L30 50 Q31 39 48 39 Q69 39 69 54 L69 112"],
+    "verified": false
+  },
+  "tsadi-final": {
+    "char": "ץ",
+    "name": { "native": "צָדִי סוֹפִית", "translit": "Tsadi sofit" },
+    "sound": { "de": "z (ts) am Wortende", "en": "ts (at the end of a word)" },
+    "say": "צָדִי סוֹפִית",
+    "example": { "text": "עֵץ", "translit": "ets", "meaning": { "de": "Baum", "en": "tree" } },
+    "mnemonic": {
+      "de": "Am Wortende verliert das צ seinen Boden und streckt sich nach unten.",
+      "en": "At the end of a word צ loses its floor and stretches downward."
+    },
+    "strokes": ["M70 36 L69 54 Q66 64 55 69", "M33 36 L46 68 L50 82 L57 112"],
     "verified": false
   }
 }
